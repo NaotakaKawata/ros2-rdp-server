@@ -41,9 +41,9 @@ If you use Docker Hub image, you can execute it with the following command.
 In the example below, remote desktop connection is possible with 13389port and SSH connection is possible with 10022port.
 ```
 #eloquent
-$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m naotakakawata/eloquent-rdp-server
+$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m <absolute pathname on host>:/home/user/Workdir/:rw naotakakawata/eloquent-rdp-server
 #foxy
-$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m naotakakawata/foxy-rdp-server
+$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m <absolute pathname on host>:/home/user/Workdir/:rw naotakakawata/foxy-rdp-server
 ```
 
 ---

@@ -41,9 +41,9 @@ Docker Hubのimageをご利用いただく場合，以下のコマンドで実�
 以下の例では13389portでリモートデスクトップ接続，10022portでSSH接続が可能です．
 ```
 #eloquent
-$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m naotakakawata/eloquent-rdp-server
+$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m -v <ホスト側のマウントしたいディレクトリの絶対パス>:/home/user/Workdir/:rw naotakakawata/eloquent-rdp-server
 #foxy
-$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m naotakakawata/foxy-rdp-server
+$ docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m -v <ホスト側のマウントしたいディレクトリの絶対パス>:/home/user/Workdir/:rw naotakakawata/foxy-rdp-server
 ```
 
 ---
